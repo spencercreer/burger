@@ -7,13 +7,13 @@ const burger = {
             cb(res);
         });
     },
-    create: function(colName, burger_name, cb) {
-        orm.insertOne('burgers', colName, burger_name, function(res) {
+    create: function(cols, vals, cb) {
+        orm.insertOne('burgers', cols, vals, function(res) {
             cb(res);
         });
     },
-    update: function(colName, colValue, keyName, keyVal, cb) {
-        orm.updateOne('burgers', colName, colValue, keyName, keyVal, function(res) {
+    update: function(cols, colValue, keyName, keyVal, cb) {
+        orm.updateOne('burgers', cols, colValue, keyName, keyVal, function(res) {
             cb(res);
         });
     }

@@ -1,4 +1,4 @@
-const mysql = requite('mysql');
+const mysql = require('mysql');
 
 const connection = mysql.creatConnection({
     host: 'localhost',
@@ -16,4 +16,5 @@ connection.connect((err) => {
     console.log(`connected as id ${connection.threadId}`)
 });
 
+// Export the orm object for the model (connection.js).
 module.exports = connection;
