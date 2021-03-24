@@ -1,6 +1,7 @@
 // Import MySQL connection.
 const connection = require('./connection.js');
 
+
 const orm = {
     selectAll: function (table, cb) {
         const queryString = "SELECT * FROM ??";
@@ -17,9 +18,9 @@ const orm = {
             cb(result);
         });
     },
-    updateOne: function (table, colName, colValue, keyName, keyVal, cb) {
+    updateOne: function (table, colName, colVal, keyName, keyVal, cb) {
         const queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
-        connection.query(queryString, [table, colName, colValue, keyName, keyVal], function (err, result) {
+        connection.query(queryString, [table, colName, colVal, keyName, keyVal], function (err, result) {
             if(err) throw err;
             cb(result);
         });
