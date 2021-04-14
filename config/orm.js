@@ -13,7 +13,6 @@ const orm = {
     insertOne: function (table, colName, burger_name, cb) {
         const queryString = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(queryString, [table, colName, burger_name], function (err, result) {
-
             if(err) throw err;
             cb(result);
         });

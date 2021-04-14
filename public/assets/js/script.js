@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.info('DOM loaded');
     }
 
-    // Set up the event listener for the devour buttons
+    // Update
     const devourBtns = document.querySelectorAll('.devour-button');
     if (devourBtns) {
         devourBtns.forEach((button) => {
+            // Set up the event listener for each of the devour buttons
             button.addEventListener('click', (e) => {
-                console.log('hello')
                 const id = e.target.getAttribute('data-id');
-                const newDevour = e.target.getAttribute('data-devoured');
+                const yesDevoured = e.target.getAttribute('data-devoured');
 
                 const devourState = {
-                    devoured: newDevour,
+                    devoured: yesDevoured,
                 };
 
                 fetch(`/api/burgers/${id}`, {
@@ -28,4 +28,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         });
     }
-})
+
+    // Create
+    const addBurger = document.getElementById('create-form');
+
+    if (addBurger) {
+        addBurger.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newBurger = {
+                burger_name: document.getElementById('bu').value.trim(),
+            }
+
+            fetch('/api/burgers', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newBurger),
+            }).then(() => {
+                document.getElementById('bu').value = '';
+
+                location.reload('/');
+            });
+        });
+    }
+});
