@@ -4,21 +4,21 @@
   <hr class="my-2">
   <div class="row">
     <div class="col-md-4">
-      <h3 class="text-center">Make a Burger</h3>
+      <h2 class="text-center mt-4">Make a Burger</h2>
       <form id="create-form">
-
-        <div class="form-group">
-          <label for="bu">Burger Name:</label>
-          <input type="text" id="bu" name="name">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Burger Name</span>
+          </div>
+          <input type="text" class="form-control" id="bu" name="name" placeholder="" aria-label="Username"
+            aria-describedby="basic-addon1">
         </div>
-
         <button id="add-button" class="btn btn-block btn-warning" type="submit">Add Burger</button>
       </form>
     </div>
     <div class="col-md-4">
-      <h2 class="text-center">Burgers to Devour!</h2>
-
-      <ul class="" style="list-style-type:none;">
+      <h2 class="text-center mt-4">Burgers to Devour!</h2>
+      <ul class="px-0" style="list-style-type:none;">
         {{#each burgers}}
         {{#unless devoured}}
         {{> burger/burger-block devoured=true}}
@@ -27,9 +27,9 @@
       </ul>
     </div>
     <div class="col-md-4">
-      <h2 class="text-center">Devoured Burgers!</h2>
+      <h2 class="text-center mt-4">Devoured Burgers!</h2>
 
-      <ul class="" style="list-style-type:none;">
+      <ul class="pl-5" style="list-style-type:none;">
         {{#each burgers}}
         {{#if devoured}}
         {{> burger/burger-block devoured=false}}
@@ -37,17 +37,16 @@
         {{/each}}
       </ul>
     </div>
+
   </div>
 
-</div>
-
-<footer class="footer mt-auto">
-  <div class="container py-3">
-    <span class="footer-text">Coded by Spencer Creer using jQuery and Bootstrap CSS framework
-      <a class="text-dark link-text mx-2" href="https://www.linkedin.com/in/spencer-creer-023246109/" target="_blank"
-        style="font-size: 25px;"><i class="fa fa-linkedin-square link-in"></i></a>
-      <a class="text-dark link-text mx-2 pt-3" href="https://github.com/spencercreer" target="_blank"><i
-          class="fa fa-github link-git" style="font-size: 25px;"></i></a>
-    </span>
-  </div>
-</footer>
+  <footer class="footer mt-auto">
+    <div class="container py-3">
+      <span class="footer-text">Coded by Spencer Creer using jQuery and Bootstrap CSS framework
+        <a class="text-dark link-text mx-2" href="https://www.linkedin.com/in/spencer-creer-023246109/" target="_blank"
+          style="font-size: 25px;"><i class="fa fa-linkedin-square link-in"></i></a>
+        <a class="text-dark link-text mx-2 pt-3" href="https://github.com/spencercreer" target="_blank"><i
+            class="fa fa-github link-git" style="font-size: 25px;"></i></a>
+      </span>
+    </div>
+  </footer>

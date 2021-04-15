@@ -4,7 +4,7 @@
         }
     
         // Update
-        const devourBtns = document.querySelectorAll('a');
+        const devourBtns = document.querySelectorAll('.devour-button');
         if (devourBtns) {
             devourBtns.forEach((button) => {
                 // Set up the event listener for each of the devour buttons
