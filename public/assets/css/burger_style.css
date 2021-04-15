@@ -1,0 +1,34 @@
+.cont{
+    position: relative;
+    width: 100%;
+    max-width: 100px;
+}
+
+.cont img{
+    width: 100%;
+    height: auto;
+}
+
+.cont .bttn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    text-align: center;
+    height: 100px;
+    width: 120px;
+}
+
+.cont:hover .bttn {
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cont:hover img {
+    filter: brightness(40%);
+}

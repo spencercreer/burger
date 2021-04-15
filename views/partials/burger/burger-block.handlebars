@@ -1,6 +1,7 @@
 <li>
-	{{burger_name}}
-
-	{{#if devoured}}<button class="devour-button" data-id="{{id}}" data-devoured="{{devoured}}">
-		DEVOUR!</button>{{/if}}
+	{{#if devoured}}<div class="cont d-inline">
+	<img src="assets/img/burger.png" style="max-width: 120px;"><button class="devour-button bttn" data-id="{{id}}" data-devoured="{{devoured}}">DEVOUR!</button>
+	</div>
+	{{/if}}
+	<p class="d-inline" style="font-size: 20px;">{{burger_name}}</p>
 </li>
