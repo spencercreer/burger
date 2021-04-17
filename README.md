@@ -2,7 +2,7 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
-MVC Burgers is a virtual burger restaurant that allows users to make and devour burgers. This application demonstrates the MVC design pattern. It uses Node and MySQL to query and route data, and Handlebars to generate HTML. The application 
+MVC Burgers is a virtual burger restaurant that allows users to make and devour burgers. This application demonstrates the MVC design pattern. It uses Node and MySQL to query and route data, and Handlebars to generate HTML.
 
 ## Table of Contents
 * [Links](#links)
@@ -14,16 +14,17 @@ MVC Burgers is a virtual burger restaurant that allows users to make and devour 
 * [Contact](#contact)
 
 ## Links
-Published URL: [TBD](TBD)
+Published URL: [https://mvc-burgers.herokuapp.com/](https://mvc-burgers.herokuapp.com/)
 
 Repository: [https://github.com/spencercreer/burger](https://github.com/spencercreer/burger)
 
 
 ## Animation
 The following animation demonstrates the application functionality:
-!["MVC Burgers animation](TBD)
+![MVC Burgers animation](./public/assets/img/burger.gif)
 ## Instructions
-TBD
+Make a burger by entering a name in the "Burger Name" field. Your burger will be added to the SQL database and will appear in the "Burgers to Devour" section. Devour burgers by clicking the burger picture.
+
 ## Installation
 To install necessary dependencies, run the following command:
 
