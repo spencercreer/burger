@@ -1,7 +1,6 @@
 const orm = require('../config/orm.js');
 
 const burger = {
-    // could try without function 
     all: function(cb) {
         orm.selectAll("burgers", function(res) {
             cb(res);
